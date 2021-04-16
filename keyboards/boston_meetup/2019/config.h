@@ -26,13 +26,15 @@
 #define MATRIX_ROW_PINS { A3, B8, B9, B1 }
 #define MATRIX_COL_PINS { A7, A8, B2, B10 }
 
-#define NUMBER_OF_ENCODERS 1
 #define ENCODERS_PAD_A { B13 }
 #define ENCODERS_PAD_B { B14 }
 
 //Audio
 #undef AUDIO_VOICES
-#undef C6_AUDIO
+#undef AUDIO_PIN
+#define AUDIO_PIN A5
+#define AUDIO_PIN_ALT A4
+#define AUDIO_PIN_ALT_AS_NEGATIVE
 
 #ifdef AUDIO_ENABLE
     #define STARTUP_SONG SONG(ONE_UP_SOUND)
@@ -115,9 +117,6 @@
  * MIDI options
  */
 
-/* Prevent use of disabled MIDI features in the keymap */
-//#define MIDI_ENABLE_STRICT 1
-
 /* enable basic MIDI features:
    - MIDI notes can be sent when in Music mode is on
 */
@@ -142,7 +141,7 @@
 #define FB_LOOPGAIN 1 /* For  Low:0, Medium:1, High:2, Very High:3 */
 
 /* default 3V ERM vibration motor voltage and library*/
-#if FB_ERM_LRA == 0 
+#if FB_ERM_LRA == 0
 #define RATED_VOLTAGE 3
 #define V_RMS 2.3
 #define V_PEAK 3.30
@@ -193,4 +192,3 @@
 #define RGB_MATRIX_KEYPRESSES
 
 #define SOLENOID_PIN A14
-
