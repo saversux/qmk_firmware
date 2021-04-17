@@ -35,11 +35,11 @@ enum keycodes {
 };
 
 const rgblight_segment_t PROGMEM lower_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 13, RGB_MAGENTA}
+    {0, 14, RGB_PURPLE}
 );
 
 const rgblight_segment_t PROGMEM raise_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 13, RGB_TURQUOISE}
+    {0, 14, RGB_PURPLE}
 );
 
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
